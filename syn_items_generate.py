@@ -149,7 +149,7 @@ def chunker(iterable, size):
     iterator = iter(iterable)
     while chunk := list(islice(iterator, size)):
         yield chunk
-# 定义重试机制
+
 def make_request_with_retry(chunk, max_retries=5, retry_delay=5):
     for attempt in range(max_retries):
         try:
